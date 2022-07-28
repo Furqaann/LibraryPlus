@@ -85,8 +85,6 @@ class MainMenu{
 
 	int main(){
 		cout<<"\t\t\tWelcome to Library Management System\t\t\t"<<endl;
-		cout<<"\t\tCreated by Furqan Fiaz in C++ on July 23rd 2022\t\t\t"<<endl;
-		cout<<"\t\t\tAll rights reserved @ Furqan Fiaz\t\t\t"<<endl<<endl;
 		int login=0;
 		cout<<"Are you a new user? "<<" Press 1  if yes "<<" "<<"Press 0 if no "<<endl;
 		cin>>login;
