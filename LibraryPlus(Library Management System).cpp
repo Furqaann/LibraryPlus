@@ -14,7 +14,7 @@ class Login{
 		cin>>check_pin;
 		if(new_user==username && check_pin==pin){
 		
-		cout<<"Successfully Logged in!";
+		cout<<"Successfully Logged in!"<<endl;
 		
 	} 	
 		return 1;
@@ -86,7 +86,11 @@ class MainMenu{
 	int main(){
 		cout<<"\t\t\tWelcome to Library Management System\t\t\t"<<endl;
 		int login=0;
-		cout<<"Are you a new user? "<<" Press 1  if yes "<<" "<<"Press 0 if no "<<endl;
+			for(int i=0;i<=1;i++){
+			
+		cout<<" Are you a new user? "<<endl<<endl;
+		cout<<" * Press 1  if yes "<<" "<<endl;
+		cout<<" * Press 0 if no "<<endl;
 		cin>>login;
 		if(login==1){
 			Login object1;
@@ -96,14 +100,20 @@ class MainMenu{
 			Login object1;
 			object1.signin();
 		}
+		}
 		int operation=0;
+		int counter=0;
+		while(counter<=3){
+		
 		cout<<" "<<endl;
 		cout<<"How can we Help you ?"<<" "<<endl;
 		cout<<"Press following numbers for performing actions:-"<<endl;
 		cout<<" 1- Search Book "<<endl;
 		cout<<" 2- Return Book "<<endl;
 		cout<<" 3- Issue Book "<<endl;
+		cout<<" 4- Exit "<<endl;
 		cin>>operation;
+		counter=operation;
 		
 		if(operation==1){
 			cout<<"\t\t\tWelcome to Search Book Section\t\t\t"<<endl;
@@ -128,8 +138,9 @@ class MainMenu{
 			MainMenu object4;
 			object4.issuebook();
 		}
-		else{
-			cout<<"Invalid Entry!!! "<<" "<<"Shutting Down Operation "<<endl;
-		}
 		
-	}		
+		else{
+			cout<<"Shutting Down Operation "<<endl;
+		}
+	}
+}		
